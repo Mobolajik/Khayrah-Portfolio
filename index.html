@@ -1,253 +1,1277 @@
-!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Khayrah Mobolaji Abudu | Business Analyst & Data Analyst</title>
+    <title>Khayrah Mobolaji Abudu| Business Analyst & Data Analyst</title>
+
+    <meta name="description"
+          content="Khayrah Mobolaji Abudu- Business Analyst and Data Analyst specializing in Power BI, Excel, SQL, Python and Microsoft Access.">
 
     <style>
-        body {
+        * {
             margin: 0;
-            font-family: Arial, sans-serif;
-            color: #222;
-            background: #f8f9fa;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        header {
-            background: #ffffff;
-            padding: 20px 8%;
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f9fc;
+            color: #172033;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e8ebf0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1150px;
+            margin: auto;
+            padding: 18px 25px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        header h2 {
-            margin: 0;
+        .logo {
+            font-size: 21px;
+            font-weight: 700;
+            color: #172033;
         }
 
-        nav a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: #222;
+        .logo span {
+            color: #2563eb;
         }
 
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            color: #4b5563;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        /* HERO */
         .hero {
-            padding: 100px 8%;
-            background: #eef3f8;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 25px 80px;
+            background:
+                radial-gradient(circle at 80% 20%, #dbeafe 0, transparent 30%),
+                linear-gradient(135deg, #ffffff 0%, #f4f7fb 100%);
+        }
+
+        .hero-container {
+            max-width: 1150px;
+            width: 100%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 7px 14px;
+            border-radius: 30px;
+            background: #e8f0ff;
+            color: #2563eb;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 20px;
         }
 
         .hero h1 {
-            font-size: 50px;
-            margin-bottom: 10px;
+            font-size: clamp(42px, 6vw, 70px);
+            line-height: 1.05;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+        }
+
+        .hero h1 span {
+            color: #2563eb;
+        }
+
+        .hero h2 {
+            font-size: 23px;
+            font-weight: 500;
+            color: #4b5563;
+            margin-bottom: 20px;
         }
 
         .hero p {
-            font-size: 20px;
             max-width: 650px;
-            line-height: 1.6;
+            color: #667085;
+            font-size: 17px;
+            margin-bottom: 30px;
         }
 
-        .button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 22px;
-            background: #222;
+        .buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 13px 22px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #2563eb;
             color: white;
-            text-decoration: none;
-            border-radius: 5px;
         }
 
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid #d0d5dd;
+            background: white;
+            color: #344054;
+        }
+
+        .btn-outline:hover {
+            border-color: #2563eb;
+            color: #2563eb;
+        }
+
+        /* HERO CARD */
+        .profile-card {
+            background: white;
+            border: 1px solid #e6eaf0;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+        }
+
+        .profile-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #2563eb;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .profile-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .profile-card p {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .mini-stat {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #edf0f4;
+            font-size: 14px;
+        }
+
+        .mini-stat:last-child {
+            border-bottom: none;
+        }
+
+        .mini-stat strong {
+            color: #2563eb;
+        }
+
+        /* GENERAL */
         section {
-            padding: 70px 8%;
+            padding: 90px 25px;
         }
 
-        .projects {
+        .section-container {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .section-label {
+            color: #2563eb;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .section-description {
+            max-width: 700px;
+            color: #667085;
+            margin-bottom: 45px;
+        }
+
+        /* ABOUT */
+        .about {
+            background: white;
+        }
+
+        .about-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .about-text p {
+            margin-bottom: 18px;
+            color: #667085;
+        }
+
+        .highlight-box {
+            background: #f7f9fc;
+            border-left: 4px solid #2563eb;
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        .highlight-box h3 {
+            margin-bottom: 10px;
+        }
+
+        .highlight-box p {
+            color: #667085;
+            font-size: 14px;
+        }
+
+        /* SKILLS */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: white;
+            border: 1px solid #e8ebf0;
+            padding: 25px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(15,23,42,0.07);
+        }
+
+        .skill-card h3 {
+            margin-bottom: 12px;
+            font-size: 17px;
+        }
+
+        .skill-card p {
+            color: #667085;
+            font-size: 14px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .skill-tags span {
+            background: #eef4ff;
+            color: #2563eb;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* PROJECTS */
+        .projects {
+            background: #f7f9fc;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 25px;
         }
 
-        .card {
+        .project-card {
             background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            border: 1px solid #e6eaf0;
+            border-radius: 14px;
+            overflow: hidden;
+            transition: 0.3s;
         }
 
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: #222;
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 35px rgba(15,23,42,0.08);
+        }
+
+        .project-header {
+            padding: 28px;
+            background: #172033;
             color: white;
+        }
+
+        .project-number {
+            color: #93c5fd;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .project-header h3 {
+            font-size: 21px;
+        }
+
+        .project-body {
+            padding: 28px;
+        }
+
+        .project-body p {
+            color: #667085;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .project-tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-bottom: 20px;
+        }
+
+        .project-tools span {
+            padding: 5px 9px;
+            border: 1px solid #dbe3f0;
+            border-radius: 5px;
+            font-size: 11px;
+            color: #475467;
+        }
+
+        .project-link {
+            color: #2563eb;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        /* EXPERIENCE */
+        .experience {
+            background: white;
+        }
+
+        .timeline {
+            border-left: 2px solid #dbeafe;
+            padding-left: 30px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 45px;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -39px;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            background: #2563eb;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px #bfdbfe;
+        }
+
+        .timeline-date {
+            color: #2563eb;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item h3 {
+            font-size: 20px;
+        }
+
+        .timeline-item h4 {
+            color: #667085;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .timeline-item p {
+            color: #667085;
+            max-width: 750px;
+        }
+
+        /* PROCESS */
+        .process {
+            background: #172033;
+            color: white;
+        }
+
+        .process .section-description {
+            color: #b8c0ce;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        .process-step {
+            padding: 22px;
+            border: 1px solid #344054;
+            border-radius: 10px;
+        }
+
+        .process-step span {
+            color: #93c5fd;
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        .process-step h3 {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .process-step p {
+            color: #b8c0ce;
+            font-size: 13px;
+        }
+
+        /* CONTACT */
+        .contact {
+            background: white;
+            text-align: center;
+        }
+
+        .contact-content {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .contact-content p {
+            color: #667085;
+            margin-bottom: 30px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #101828;
+            color: #98a2b3;
+            text-align: center;
+            padding: 25px;
+            font-size: 13px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 850px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-container,
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding-top: 130px;
+            }
+
+            .profile-card {
+                max-width: 500px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 29px;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-<header>
+<!-- NAVIGATION -->
+<nav>
+    <div class="nav-container">
 
-    <h2>Khayrah Mobolaji Abudu </h2>
+        <div class="logo">
+            KM<span>.</span>
+        </div>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-    </nav>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
 
-</header>
+    </div>
+</nav>
 
 
+<!-- HERO -->
 <section class="hero">
 
-    <h1>Business Analyst & Data Analyst</h1>
+    <div class="hero-container">
 
-    <p>
-        I transform data into meaningful insights that support
-        better business decisions.
-    </p>
+        <div>
 
-    <p>
-        Excel | Power BI | SQL 
-    </p>
+            <div class="tag">
+                BUSINESS ANALYST • DATA ANALYST
+            </div>
 
-    <a href="#projects" class="button">View My Projects</a>
+            <h1>
+                Turning data into
+                <span>business insights.</span>
+            </h1>
+
+            <h2>
+                Business Analyst | Data Analyst | Business Intelligence
+            </h2>
+
+            <p>
+                I analyse business data, build interactive dashboards and
+                develop data-driven solutions that help organisations
+                understand performance, identify opportunities and make
+                better decisions.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#projects" class="btn btn-primary">
+                    View My Projects
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="profile-card">
+
+            <div class="profile-icon">
+                KM
+            </div>
+
+            <h3>
+                Khayrah Mobolaji
+            </h3>
+
+            <p>
+                Business Analyst with a strong focus on data analysis,
+                business intelligence and reporting.
+            </p>
+
+            <div class="mini-stat">
+                <span>Power BI</span>
+                <strong>Advanced</strong>
+            </div>
+
+            <div class="mini-stat">
+                <span>Excel</span>
+                <strong>Advanced</strong>
+            </div>
+
+            <div class="mini-stat">
+                <span>SQL</span>
+                <strong>Intermediate</strong>
+            </div>
+
+            <div class="mini-stat">
+                <span>Microsoft Access</span>
+                <strong>Database</strong>
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<section id="about">
+<!-- ABOUT -->
+<section class="about" id="about">
 
-    <h2>About Me</h2>
+    <div class="section-container">
 
-    <p>
-        I am a Business Analyst with experience in data analysis,
-        business reporting and dashboard development. I enjoy
-        transforming complex data into clear and actionable
-        insights that support business decision-making.
-    </p>
+        <div class="section-label">
+            About Me
+        </div>
+
+        <h2 class="section-title">
+            Data-driven problem solver
+        </h2>
+
+        <div class="about-grid">
+
+            <div class="about-text">
+
+                <p>
+                    I am a Business Analyst with experience in data analysis,
+                    reporting, dashboard development and business intelligence.
+                </p>
+
+                <p>
+                    My approach combines analytical thinking with an
+                    understanding of business processes. I transform raw
+                    operational data into meaningful insights that support
+                    decision-making.
+                </p>
+
+                <p>
+                    I enjoy working with data from collection and cleaning
+                    through analysis, visualisation and communicating
+                    recommendations to stakeholders.
+                </p>
+
+            </div>
+
+            <div class="highlight-box">
+
+                <h3>
+                    What I Bring
+                </h3>
+
+                <p>
+                    • Business performance analysis
+                </p>
+
+                <p>
+                    • Interactive Power BI dashboards
+                </p>
+
+                <p>
+                    • Advanced Excel reporting
+                </p>
+
+                <p>
+                    • SQL data analysis
+                </p>
+
+                <p>
+                    • Database design with Microsoft Access
+                </p>
+
+                <p>
+                    • Data-driven recommendations
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
 
+<!-- SKILLS -->
 <section id="skills">
 
-    <h2>Skills</h2>
+    <div class="section-container">
 
-    <div class="projects">
-
-        <div class="card">
-            <h3>Excel</h3>
-            <p>Advanced Excel, Pivot Tables, XLOOKUP, Power Query and data analysis.</p>
+        <div class="section-label">
+            Skills
         </div>
 
-        <div class="card">
-            <h3>Power BI</h3>
-            <p>Dashboard development, DAX, Power Query and data modelling.</p>
+        <h2 class="section-title">
+            Tools & capabilities
+        </h2>
+
+        <p class="section-description">
+            A combination of analytical, technical and business skills
+            used to solve real-world problems.
+        </p>
+
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+
+                <h3>
+                    Business Intelligence
+                </h3>
+
+                <p>
+                    Building interactive dashboards and performance
+                    reporting solutions.
+                </p>
+
+                <div class="skill-tags">
+                    <span>Power BI</span>
+                    <span>DAX</span>
+                    <span>Power Query</span>
+                </div>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>
+                    Data Analysis
+                </h3>
+
+                <p>
+                    Cleaning, analysing and interpreting data to identify
+                    trends and business opportunities.
+                </p>
+
+                <div class="skill-tags">
+                    <span>Excel</span>
+                    <span>Python</span>
+                    <span>R</span>
+                </div>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>
+                    Database & SQL
+                </h3>
+
+                <p>
+                    Querying, structuring and managing relational data.
+                </p>
+
+                <div class="skill-tags">
+                    <span>SQL</span>
+                    <span>MySQL</span>
+                    <span>Access</span>
+                </div>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>
+                    Business Analysis
+                </h3>
+
+                <p>
+                    Translating business requirements into analytical
+                    solutions and actionable insights.
+                </p>
+
+                <div class="skill-tags">
+                    <span>KPI Analysis</span>
+                    <span>Requirements</span>
+                    <span>Reporting</span>
+                </div>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>
+                    Data Visualisation
+                </h3>
+
+                <p>
+                    Designing clear and executive-friendly reports and
+                    dashboards.
+                </p>
+
+                <div class="skill-tags">
+                    <span>Power BI</span>
+                    <span>Excel</span>
+                    <span>Charts</span>
+                </div>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>
+                    Reporting
+                </h3>
+
+                <p>
+                    Converting analysis into concise reports and
+                    management insights.
+                </p>
+
+                <div class="skill-tags">
+                    <span>Executive Reports</span>
+                    <span>KPI</span>
+                    <span>Insights</span>
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="card">
-            <h3>SQL</h3>
-            <p>Data extraction, joins, aggregations and business analysis.</p>
-       
     </div>
 
 </section>
 
 
-<section id="projects">
+<!-- PROJECTS -->
+<section class="projects" id="projects">
 
-    <h2>Featured Projects</h2>
+    <div class="section-container">
 
-    <div class="projects">
-
-        <div class="card">
-            <h3>Sales Performance Dashboard</h3>
-            <p>
-                Power BI dashboard analyzing sales performance,
-                customer contribution and product performance.
-            </p>
-            <a href="#">View Project →</a>
+        <div class="section-label">
+            Featured Work
         </div>
 
+        <h2 class="section-title">
+            Selected projects
+        </h2>
 
-        <div class="card">
-            <h3>Inventory Analysis</h3>
-            <p>
-                Analysis of inventory levels, stock movement
-                and product performance.
-            </p>
-            <a href="#">View Project →</a>
-        </div>
-
-
-        <div class="card">
-            <h3>Customer Analysis</h3>
-            <p>
-                Analysis of customer purchasing behaviour,
-                contribution and growth.
-            </p>
-            <a href="#">View Project →</a>
-        </div>
-        </section> <!-- EXPERIENCE --> 
-    <section class="experience" id="experience"> 
-        <div class="section-container"> <div class="section-label"> 
-            Experience </div>
-            <h2 class="section-title"> Professional experience </h2> 
-            <div class="timeline"> <div class="timeline-item"> 
-                <div class="timeline-date"> DECEMBER 2025 — PRESENT </div> <h3> Business Analyst </h3> <h4>
-                    Worldwide Commercial Ventures </h4> <p> 
-                        Supporting business analysis, 
-                        reporting and data-driven decision-making through performance analysis, 
-                        dashboard development and business intelligence solutions. </p> </div>
-                <div class="timeline-item"> 
-                    <div class="timeline-date"> PREVIOUS EXPERIENCE </div> <h3> 
-                        Data Analyst </h3> <h4> Talamus Health Nigeria </h4> <p> 
-                            Worked on statistical analysis, monthly reporting,
-                            dashboard development and monitoring of Primary Healthcare Workers' usage and performance. 
-                        </p> </div> </div> </div> </section>
+        <p class="section-description">
+            A selection of analytical and business intelligence projects
+            demonstrating how I use data to solve business problems.
+        </p>
 
 
-        <div class="card">
-            <h3>SQL Business Analysis</h3>
-            <p>
-                SQL analysis answering key business questions
-                using customer, sales and product data.
-            </p>
-            <a href="#">View Project →</a>
+        <div class="projects-grid">
+
+
+            <!-- PROJECT 1 -->
+
+            <div class="project-card">
+
+                <div class="project-header">
+
+                    <div class="project-number">
+                        PROJECT 01
+                    </div>
+
+                    <h3>
+                        Sales & Power BI Dashboard
+                    </h3>
+
+                </div>
+
+                <div class="project-body">
+
+                    <p>
+                        An executive sales performance dashboard designed
+                        to monitor revenue, growth, customer performance,
+                        product contribution and regional trends.
+                    </p>
+
+                    <div class="project-tools">
+                        <span>Power BI</span>
+                        <span>DAX</span>
+                        <span>Excel</span>
+                        <span>Power Query</span>
+                    </div>
+
+                    <a href="#" class="project-link">
+                        View Project →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="project-card">
+
+                <div class="project-header">
+
+                    <div class="project-number">
+                        PROJECT 02
+                    </div>
+
+                    <h3>
+                        Inventory & Supply Chain Dashboard
+                    </h3>
+
+                </div>
+
+                <div class="project-body">
+
+                    <p>
+                        A business intelligence solution for monitoring
+                        inventory levels, stock movement, product
+                        availability and low-stock items.
+                    </p>
+
+                    <div class="project-tools">
+                        <span>Power BI</span>
+                        <span>DAX</span>
+                        <span>Excel</span>
+                        <span>Power Query</span>
+                    </div>
+
+                    <a href="#" class="project-link">
+                        View Project →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 3 -->
+
+            <div class="project-card">
+
+                <div class="project-header">
+
+                    <div class="project-number">
+                        PROJECT 03
+                    </div>
+
+                    <h3>
+                        Customer & Order Analysis
+                    </h3>
+
+                </div>
+
+                <div class="project-body">
+
+                    <p>
+                        Analysis of customer purchasing behaviour and
+                        order performance, including customer growth,
+                        order status and delivery performance.
+                    </p>
+
+                    <div class="project-tools">
+                        <span>SQL</span>
+                        <span>Power BI</span>
+                        <span>Excel</span>
+                        <span>DAX</span>
+                    </div>
+
+                    <a href="#" class="project-link">
+                        View Project →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 4 -->
+
+            <div class="project-card">
+
+                <div class="project-header">
+
+                    <div class="project-number">
+                        PROJECT 04
+                    </div>
+
+                    <h3>
+                        SQL & Access Database Project
+                    </h3>
+
+                </div>
+
+                <div class="project-body">
+
+                    <p>
+                        A relational sales and inventory database designed
+                        to manage customers, products, transactions and
+                        generate operational reports.
+                    </p>
+
+                    <div class="project-tools">
+                        <span>SQL</span>
+                        <span>Microsoft Access</span>
+                        <span>Database Design</span>
+                        <span>Excel</span>
+                    </div>
+
+                    <a href="#" class="project-link">
+                        View Project →
+                    </a>
+
+                </div>
+
+            </div>
+
+
         </div>
 
     </div>
 
-
-
-</section>
-
-<section id="contact">
-
-    <h2>Contact</h2>
-
-    <p>
-        Interested in working together or discussing a data project?
-    </p>
-
-    <p>mobolajikhayrah@gmail.com</p>
-
-    <p>
-        08166651780
-    </p>
-
 </section>
 
 
-<footer>
+<!-- ANALYTICAL PROCESS -->
+<section class="process">
 
-    <p>© 2026 Khayrah. All Rights Reserved.</p>
+    <div class="section-container">
 
-</footer>
+        <div class="section-label">
+            My Approach
+        </div>
+
+        <h2 class="section-title">
+            From data to decisions
+        </h2>
+
+        <p class="section-description">
+            I follow a structured approach to ensure that analysis
+            answers the underlying business question.
+        </p>
+
+
+        <div class="process-grid">
+
+            <div class="process-step">
+                <span>01</span>
+                <h3>Understand</h3>
+                <p>
+                    Define the business problem and objectives.
+                </p>
+            </div>
+
+            <div class="process-step">
+                <span>02</span>
+                <h3>Prepare</h3>
+                <p>
+                    Collect, clean and structure the data.
+                </p>
+            </div>
+
+            <div class="process-step">
+                <span>03</span>
+                <h3>Analyse</h3>
+                <p>
+                    Identify patterns, trends and performance drivers.
+                </p>
+            </div>
+
+            <div class="process-step">
+                <span>04</span>
+                <h3>Visualise</h3>
+                <p>
+                    Build dashboards and meaningful reports.
+                </p>
+            </div>
+
+            <div class="process-step">
+                <span>05</span>
+                <h3>Recommend</h3>
+                <p>
+                    Translate insights into actionable decisions.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+<section class="experience" id="experience">
+
+    <div class="section-container">
+
+        <div class="section-label">
+            Experience
+        </div>
+
+        <h2 class="section-title">
+            Professional experience
+        </h2>
+
+        <div class="timeline">
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-date">
+                    DECEMBER 2025 — PRESENT
+                </div>
+
+                <h3>
+                    Business Analyst
+                </h3>
+
+                <h4>
+                    Worldwide Commercial Ventures
+                </h4>
+
+                <p>
+                    Supporting business analysis, reporting and
+                    data-driven decision-making through performance
+                    analysis, dashboard development and business
+                    intelligence solutions.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-date">
+                    PREVIOUS EXPERIENCE
+                </div>
+
+                <h3>
+                    Data Analyst
+                </h3>
+
+                <h4>
+                    Talamus Health Nigeria
+                </h4>
+
+                <p>
+                    Worked on statistical analysis, monthly reporting,
+                    dashboard development and monitoring of Primary
+                    Healthcare Workers' usage and performance.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+    <div class="section-container">
+
+        <div class="contact-content">
+
+            <div class="section-label">
+                Let's Connect
+            </div>
+
+            <h2 class="section-title">
+                Let's work with data
+            </h2>
+
+            <p>
+                I am open to Business Analyst, Data Analyst and
+                Business Intelligence opportunities where I can use
+                data to solve meaningful business problems.
+            </p>
+
+            <div class="contact-links">
+
+               
+                <a href="https://www.linkedin.com/in/adekilekun-khayrah-mobolaji-56b1aa185/"
+                   target="_blank"
+                   class="btn btn-primary">
+                    LinkedIn
+                
+                <a href="mobolajikhayrah@gmail.com"
+                   class="btn btn-outline">
+                    Email Me
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
 
 </body>
 </html>
+```
